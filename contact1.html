@@ -3,41 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Debit Manager</title>
+  <title>Stackly - Reach Us</title>
   <link rel="stylesheet" href="contact1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-
-  <!-- Header -->
- <header>
-  <div class="logo">
-    <a href="index.html">
-      <img src="logo.jpg" alt="Stackly Logo">
-      <h1>STACKLY</h1>
-    </a>
-  </div>
-  <!-- Hamburger icon -->
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="menu-icon">&#9776;</label> 
-   <nav class="nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="home.html">Home2</a></li>
-      <li><a href="aboutus.html">About us</a></li>
-      <li><a href="facility.html">facility</a></li>
-      <li><a href="contact1.html"class="active">Reach us</a></li>
-      <li><a href="login here.html">Login</a></li>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Stackly Logo">
+        <h1>STACKLY</h1>
+      </a>
+    </div>
+    <!-- Hamburger icon -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+    <nav class="nav" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home.html">Home2</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="contact1.html" class="active">Reach us</a></li>
+        <li><a href="login here.html">Login</a></li>
       </ul>
-  </nav>
-</header>
+    </nav>
+  </header>
+
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="overlay"></div>
@@ -67,7 +62,7 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form class="contact-form" action="404.html" method="get">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Email Address" required>
         <input type="text" placeholder="Phone Number" required>
@@ -244,4 +239,5 @@
     <div class="copyright">
       <p>© 2025 Stackly | All Rights Reserved</p>
     </div>
+    
   </footer>
