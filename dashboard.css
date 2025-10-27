@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #400220;
+  color: #ffffff;
+  padding: 100px 20px 40px;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #120418;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  z-index: 1000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.logo h1 {
+  color: #c084fc;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f36aff;
+  text-shadow: 0 0 8px #f36aff;
+}
+
+/* DASHBOARD SECTION */
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  color: #c084fc;
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 24px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background: #1c1a29;
+  border: 1px solid #7c3aed;
+  border-radius: 10px;
+  padding: 15px 20px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.6);
+}
+
+.card h3 {
+  color: #c084fc;
+}
+
+/* Charts and Feeds */
+.main-section {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.chart-container {
+  flex: 2;
+  background: #1c1a29;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+.side-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feed {
+  background: #1c1a29;
+  border: 1px solid #7c3aed;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.feed h4 {
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+/* Bottom section */
+.bottom-section {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.small {
+  flex: 1;
+  min-width: 300px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards, .main-section, .bottom-section {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+}
+footer {
+  background: #120013;
+  color: white;
+  padding: 60px 80px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  color: #aaa;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff4bff;
+}
+
+.footer-contact p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  color: #777;
+}
+/* 🌙 Responsive Navbar Design */
+@media (max-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: relative;
+  }
+
+  /* Hide normal menu */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 15px 0;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+/* Hide hamburger for desktop */
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+}
+/* ===== General Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #fff;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #8b3dff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #b366ff;
+  letter-spacing: 1px;
+}
+
+/* ===== Navigation ===== */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #b366ff;
+}
+
+/* ===== Hamburger Icon ===== */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 900px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    border-top: 1px solid #b366ff;
+    border-bottom: 1px solid #b366ff;
+    border-radius: 0 0 15px 15px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 15px #b366ff;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0;
+  }
+
+  .nav a {
+    font-size: 18px;
+    display: block;
+  }
+}
+
+/* ===== Extra Small Devices ===== */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .menu-icon {
+    font-size: 26px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+}
